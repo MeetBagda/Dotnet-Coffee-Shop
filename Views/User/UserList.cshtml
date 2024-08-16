@@ -1,4 +1,5 @@
-﻿@model IEnumerable<UserModel>
+﻿@model DataTable
+@using System.Data
 
 @{
     ViewData["Title"] = "User List";
@@ -18,15 +19,15 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var user in Model)
+        @foreach (DataRow row in Model.Rows)
         {
             <tr>
-                <td>@user.UserID</td>
-                <td>@user.UserName</td>
-                <td>@user.Email</td>
-                <td>@user.MobileNo</td>
-                <td>@user.Address</td>
-                <td>@user.IsActive</td>
+                <td>@row["UserID"]</td>
+                <td>@row["UserName"]</td>
+                <td>@row["Email"]</td>
+                <td>@row["MobileNo"]</td>
+                <td>@row["Address"]</td>
+                <td>@row["IsActive"]</td>
             </tr>
         }
     </tbody>

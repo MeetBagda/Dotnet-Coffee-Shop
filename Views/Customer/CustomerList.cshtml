@@ -1,4 +1,5 @@
-﻿@model IEnumerable<CustomerModel>
+﻿@model DataTable
+@using System.Data
 
 @{
     ViewData["Title"] = "Customer List";
@@ -22,19 +23,20 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var customer in Model)
+        @foreach (DataRow row in Model.Rows)
         {
             <tr>
-                <td>@customer.CustomerID</td>
-                <td>@customer.CustomerName</td>
-                <td>@customer.HomeAddress</td>
-                <td>@customer.Email</td>
-                <td>@customer.MobileNo</td>
-                <td>@customer.GSTNo</td>
-                <td>@customer.CityName</td>
-                <td>@customer.PinCode</td>
-                <td>@customer.NetAmount.ToString("C")</td> <!-- Format as currency -->
-                <td>@customer.UserID</td>
+                <td>@row["CustomerID"]</td>
+                <td>@row["CustomerName"]</td>
+                <td>@row["HomeAddress"]</td>
+                <td>@row["Email"]</td>
+                <td>@row["MobileNo"]</td>
+                <td>@row["GSTNo"]</td>
+                <td>@row["CityName"]</td>
+                <td>@row["PinCode"]</td>
+                <td>@row["NetAmount"]</td>
+                <td>@row["UserID"]</td>
+
             </tr>
         }
     </tbody>

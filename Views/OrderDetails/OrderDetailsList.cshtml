@@ -1,4 +1,5 @@
-﻿@model IEnumerable<OrderDetailsModel>
+﻿@model DataTable
+@using System.Data
 
 @{
     ViewData["Title"] = "Order Details List";
@@ -19,16 +20,17 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var detail in Model)
+        @foreach (DataRow row in Model.Rows)
         {
             <tr>
-                <td>@detail.OrderDetailID</td>
-                <td>@detail.OrderID</td>
-                <td>@detail.ProductID</td>
-                <td>@detail.Quantity</td>
-                <td>@detail.Amount.ToString("C")</td> <!-- Format as currency -->
-                <td>@detail.TotalAmount.ToString("C")</td> <!-- Format as currency -->
-                <td>@detail.UserID</td>
+                <td>@row["OrderDetailID"]</td>
+                <td>@row["OrderID"]</td>
+                <td>@row["ProductID"]</td>
+                <td>@row["Quantity"]</td>
+                <td>@row["Amount"]</td>
+                <td>@row["TotalAmount"]</td>
+                <td>@row["UserID"]</td>
+
             </tr>
         }
     </tbody>

@@ -1,5 +1,37 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<OrderModel>
+
 @{
+    ViewData["Title"] = "Order List";
 }
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>OrderID</th>
+            <th>OrderNumber</th>
+            <th>OrderDate</th>
+            <th>CustomerID</th>
+            <th>PaymentMode</th>
+            <th>TotalAmount</th>
+            <th>ShippingAddress</th>
+            <th>UserID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderID</td>
+                <td>@order.OrderNumber</td>
+                <td>@order.OrderDate.ToString("d")</td> <!-- Format as short date -->
+                <td>@order.CustomerID</td>
+                <td>@order.PaymentMode</td>
+                <td>@order.TotalAmount?.ToString("C")</td> <!-- Format as currency, handles null -->
+                <td>@order.ShippingAddress</td>
+                <td>@order.UserID</td>
+            </tr>
+        }
+    </tbody>
+</table>

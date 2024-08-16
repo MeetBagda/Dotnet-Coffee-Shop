@@ -1,5 +1,39 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<BillModel>
+
 @{
+    ViewData["Title"] = "Bill List";
 }
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>BillID</th>
+            <th>BillNumber</th>
+            <th>BillDate</th>
+            <th>OrderID</th>
+            <th>TotalAmount</th>
+            <th>Discount</th>
+            <th>NetAmount</th>
+            <th>CustomerID</th>
+            <th>UserID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bill in Model)
+        {
+            <tr>
+                <td>@bill.BillID</td>
+                <td>@bill.BillNumber</td>
+                <td>@bill.BillDate.ToString("d")</td>
+                <td>@bill.OrderID</td>
+                <td>@bill.TotalAmount.ToString("C")</td>
+                <td>@bill.Discount?.ToString("C")</td>
+                <td>@bill.NetAmount.ToString("C")</td>
+                <td>@bill.CustomerID</td>
+                <td>@bill.UserID</td>
+            </tr>
+        }
+    </tbody>
+</table>

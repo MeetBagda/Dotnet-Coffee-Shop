@@ -4,7 +4,7 @@ namespace coffee_shop.Controllers
 {
     public class CustomerController : Controller
     {
-        public IActionResult Index()
+        public IActionResult CustomerList()
         {
             return View();
         }

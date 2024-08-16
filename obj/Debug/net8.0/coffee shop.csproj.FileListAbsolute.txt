@@ -1,0 +1,39 @@
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\appsettings.Development.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\appsettings.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\coffee shop.staticwebassets.runtime.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\coffee shop.exe
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\coffee shop.deps.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\coffee shop.runtimeconfig.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\coffee shop.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\coffee shop.pdb
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\System.Data.SqlClient.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.csproj.AssemblyReference.cache
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.GeneratedMSBuildEditorConfig.editorconfig
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.AssemblyInfoInputs.cache
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.AssemblyInfo.cs
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.csproj.CoreCompileInputs.cache
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.MvcApplicationPartsAssemblyInfo.cache
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.RazorAssemblyInfo.cache
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.RazorAssemblyInfo.cs
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.sourcelink.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets.build.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets.development.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets\msbuild.coffee shop.Microsoft.AspNetCore.StaticWebAssets.props
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets\msbuild.build.coffee shop.props
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.coffee shop.props
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.coffee shop.props
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\staticwebassets.pack.json
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\scopedcss\bundle\coffee shop.styles.css
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\scopedcss\projectbundle\coffee shop.bundle.scp.css
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee s.816DC981.Up2Date
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\refint\coffee shop.dll
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.pdb
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\coffee shop.genruntimeconfig.cache
+G:\SOFTWARE_INSTALLTION\VisualStudio\source\repos\coffee shop management system\coffee shop\obj\Debug\net8.0\ref\coffee shop.dll

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<BillModel>
+﻿
+@model DataTable
+@using System.Data
 
 @{
     ViewData["Title"] = "Bill List";
@@ -21,18 +23,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var bill in Model)
+        @foreach (DataRow row in Model.Rows)
         {
             <tr>
-                <td>@bill.BillID</td>
-                <td>@bill.BillNumber</td>
-                <td>@bill.BillDate.ToString("d")</td>
-                <td>@bill.OrderID</td>
-                <td>@bill.TotalAmount.ToString("C")</td>
-                <td>@bill.Discount?.ToString("C")</td>
-                <td>@bill.NetAmount.ToString("C")</td>
-                <td>@bill.CustomerID</td>
-                <td>@bill.UserID</td>
+                <td>@row["BillID"]</td>
+                <td>@row["BillNumber"]</td>
+                <td>@row["BillDate"]</td>
+                <td>@row["OrderID"]</td>
+                <td>@row["TotalAmount"]</td>
+                <td>@row["Discount"]</td>
+                <td>@row["NetAmount"]</td>
+                <td>@row["CustomerID"]</td>
+                <td>@row["UserID"]</td>
+
             </tr>
         }
     </tbody>

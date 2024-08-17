@@ -34,9 +34,12 @@
                 <td>
                     <a href="@Url.Action("Edit", "OrderDetails", new { id = row["OrderDetailID"] })"
                         class="btn btn-sm btn-primary">Edit</a>
-                    <a href="@Url.Action("Delete", "OrderDetails", new { id = row["OrderDetailID"] })"
-                        class="btn btn-sm btn-danger"
-                        onclick="return confirm('Are you sure you want to delete this bill?');">Delete</a>
+
+                    <a asp-controller="OrderDetails" asp-action="OrderDetailsDelete"
+                        asp-route-OrderDetailID="@row["OrderDetailID"]" class="btn btn-outline-danger btn-xs"
+                        onclick="return confirm('Are you sure you want to delete this record?')">
+                        <i class="bi bi-x"></i>
+                    </a>
                 </td>
             </tr>
         }

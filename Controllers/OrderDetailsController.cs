@@ -25,5 +25,26 @@ namespace coffee_shop.Controllers
             table.Load(reader);
             return View(table);
         }
+
+        public IActionResult OrderDetailsDelete(int orderDetailId)
+        {
+            try
+            {
+                string connectionString = this.configuration.GetConnectionString("ConnectionString");
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "spOrderDetails_Delete";
+                command.Parameters.AddWithValue("@OrderDetailID", orderDetailId);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+                Console.WriteLine(ex.ToString());
+            }
+            return RedirectToAction("OrderDetailsList");
+        }
     }
 }

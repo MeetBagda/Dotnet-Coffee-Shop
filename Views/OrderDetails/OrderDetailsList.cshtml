@@ -17,6 +17,7 @@
             <th>Amount</th>
             <th>TotalAmount</th>
             <th>UserID</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -30,7 +31,13 @@
                 <td>@row["Amount"]</td>
                 <td>@row["TotalAmount"]</td>
                 <td>@row["UserID"]</td>
-
+                <td>
+                    <a href="@Url.Action("Edit", "OrderDetails", new { id = row["OrderDetailID"] })"
+                        class="btn btn-sm btn-primary">Edit</a>
+                    <a href="@Url.Action("Delete", "OrderDetails", new { id = row["OrderDetailID"] })"
+                        class="btn btn-sm btn-danger"
+                        onclick="return confirm('Are you sure you want to delete this bill?');">Delete</a>
+                </td>
             </tr>
         }
     </tbody>

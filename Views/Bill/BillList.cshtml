@@ -1,5 +1,4 @@
-﻿
-@model DataTable
+﻿@model DataTable
 @using System.Data
 
 @{
@@ -8,7 +7,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="table">
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>BillID</th>
@@ -20,6 +19,7 @@
             <th>NetAmount</th>
             <th>CustomerID</th>
             <th>UserID</th>
+            <th>Action</th> <!-- Added Action column -->
         </tr>
     </thead>
     <tbody>
@@ -35,7 +35,10 @@
                 <td>@row["NetAmount"]</td>
                 <td>@row["CustomerID"]</td>
                 <td>@row["UserID"]</td>
-
+                <td>
+                    <a href="@Url.Action("Edit", "Bill", new { id = row["BillID"] })" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="@Url.Action("Delete", "Bill", new { id = row["BillID"] })" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this bill?');">Delete</a>
+                </td> <!-- Action buttons -->
             </tr>
         }
     </tbody>

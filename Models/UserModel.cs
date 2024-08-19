@@ -29,4 +29,6 @@ namespace coffee_shop.Models
         [Required(ErrorMessage = "Is Active status is required.")]
         public bool IsActive { get; set; }
     }
+
+    
 }

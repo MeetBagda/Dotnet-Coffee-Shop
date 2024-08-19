@@ -32,4 +32,5 @@ namespace coffee_shop.Models
 
         public int CustomerID { get; set; }
     }
+
 }

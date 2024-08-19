@@ -25,4 +25,6 @@ namespace coffee_shop.Models
         [Required(ErrorMessage = "User ID is required.")]
         public int UserID { get; set; }
     }
+
+    
 }

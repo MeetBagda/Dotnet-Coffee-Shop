@@ -7,10 +7,10 @@ namespace coffee_shop.Models
         public int OrderDetailID { get; set; }
 
         [Required(ErrorMessage = "Order ID is required.")]
-        public int OrderID { get; set; }
+        public OrderDropdownModel Order { get; set; }
 
         [Required(ErrorMessage = "Product ID is required.")]
-        public int ProductID { get; set; }
+        public ProductDropdownModel Product { get; set; }
 
         [Required(ErrorMessage = "Quantity is required.")]
         [Range(1, int.MaxValue, ErrorMessage = "Quantity must be greater than 0.")]
@@ -25,6 +25,6 @@ namespace coffee_shop.Models
         public decimal TotalAmount { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
-        public int UserID { get; set; }
+        public UserDropdownModel User { get; set; }
     }
 }

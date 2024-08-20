@@ -51,10 +51,7 @@ namespace coffee_shop.Controllers
 
         public IActionResult ProductSave(ProductModel productModel)
         {
-            if (productModel.UserID <= 0)
-            {
-                ModelState.AddModelError("UserID", "A valid User is required.");
-            }
+
 
             if (ModelState.IsValid)
             {
@@ -76,7 +73,7 @@ namespace coffee_shop.Controllers
                 command.Parameters.Add("@ProductCode", SqlDbType.VarChar).Value = productModel.ProductCode;
                 command.Parameters.Add("@ProductPrice", SqlDbType.Decimal).Value = productModel.ProductPrice;
                 command.Parameters.Add("@Description", SqlDbType.VarChar).Value = productModel.Description;
-                command.Parameters.Add("@UserID", SqlDbType.Int).Value = productModel.UserID;
+                command.Parameters.Add("@UserID", SqlDbType.Int).Value = productModel.User.UserID;
                 command.ExecuteNonQuery();
                 return RedirectToAction("ProductList");
             }

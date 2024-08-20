@@ -38,7 +38,7 @@ namespace coffee_shop.Models
         public decimal NetAmount { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
-        public int UserID { get; set; }
+        public UserDropdownModel User { get; set; }
     }
 
 }

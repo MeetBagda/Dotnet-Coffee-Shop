@@ -24,6 +24,8 @@ namespace coffee_shop.Models
 
         [Required(ErrorMessage = "User ID is required.")]
         public UserDropdownModel User { get; set; }
+
+        
     }
 
     

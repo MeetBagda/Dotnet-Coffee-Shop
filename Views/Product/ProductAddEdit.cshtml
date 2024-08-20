@@ -39,10 +39,16 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="UserID" class="control-label"></label>
-                <input asp-for="UserID" class="form-control" />
-                <span asp-validation-for="UserID" class="text-danger"></span>
+                <select class="form-control" asp-for="ProductID">
+                    <option value="">Select Product</option>
+                    @foreach (var product in ViewBag.ProductList)
+                    {
+                        <option value="@product.ProductID">@product.ProductName</option>
+                    }
+                </select>
             </div>
+
+
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">@ViewData["Title"]</button>

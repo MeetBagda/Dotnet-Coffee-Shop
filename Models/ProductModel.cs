@@ -23,10 +23,14 @@ namespace coffee_shop.Models
         public string Description { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
-        public UserDropdownModel User { get; set; }
+        public int UserID { get; set; }
 
-        
+
     }
 
-    
+    public class ProductDropDownModel
+    {
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
+    }
 }

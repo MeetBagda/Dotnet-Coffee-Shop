@@ -14,7 +14,7 @@ namespace coffee_shop.Models
         public DateTime BillDate { get; set; }
 
         [Required(ErrorMessage = "Order ID is required.")]
-        public OrderDropdownModel Order { get; set; }
+        public int OrderID { get; set; }
 
         [Required(ErrorMessage = "Total Amount is required.")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Total Amount must be greater than 0.")]
@@ -28,9 +28,7 @@ namespace coffee_shop.Models
         public decimal NetAmount { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
-        public UserDropdownModel User { get; set; }
-
-        public CustomerDropdownModel Cutomer { get; set; }
+        public int UserID { get; set; }
     }
 
 }

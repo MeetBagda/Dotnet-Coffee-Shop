@@ -30,15 +30,21 @@ namespace coffee_shop.Models
         public string CityName { get; set; }
 
         [Required(ErrorMessage = "Pin Code is required.")]
-        [RegularExpression(@"^\d{6}$", ErrorMessage = "Pin Code must be a 6-digit number.")]
+        [StringLength(6, MinimumLength = 6, ErrorMessage = "Pin Code must be 6 characters long")]
         public string PinCode { get; set; }
 
         [Required(ErrorMessage = "Net Amount is required.")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Net Amount must be greater than 0.")]
+        [Range(0, double.MaxValue, ErrorMessage = "Net Amount must be a positive number")]
         public decimal NetAmount { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
-        public UserDropdownModel User { get; set; }
+        public int UserID { get; set; }
+    }
+
+    public class CustomerDropDownModel
+    {
+        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
     }
 
 }

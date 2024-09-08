@@ -13,7 +13,7 @@ namespace coffee_shop.Models
         public DateTime OrderDate { get; set; }
 
         [Required(ErrorMessage = "Customer ID is required.")]
-        public CustomerDropdownModel Customer { get; set; }
+        public int CustomerID { get; set; }
 
         [Required(ErrorMessage = "Payment Mode is required.")]
         [StringLength(50, ErrorMessage = "Payment Mode cannot be longer than 50 characters.")]
@@ -27,6 +27,12 @@ namespace coffee_shop.Models
         public string ShippingAddress { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
-        public UserDropdownModel User { get; set; }
+        public int UserID { get; set; }
+    }
+
+    public class OrderDropDownModel
+    {
+        public int OrderID { get; set; }
+        public string OrderCode { get; set; }
     }
 }

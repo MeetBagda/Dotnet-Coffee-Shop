@@ -22,6 +22,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxCaWxsTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Bill/BillsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxCaWxsc0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Customer/CustomerForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Customer/CustomerList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,8 +42,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/OrderDetails/OrderDetailForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXE9yZGVyRGV0YWlsRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/OrderDetails/OrderDetailsList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXE9yZGVyRGV0YWlsc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Order/OrderForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Order/OrderList.cshtml]
@@ -44,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Product/ProductAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0QWRkRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Product/ProductForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0Rm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Product/ProductList.cshtml]
@@ -56,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/User/UserForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/SOFTWARE_INSTALLTION/VisualStudio/source/repos/coffee shop management system/coffee shop/Views/User/UserList.cshtml]

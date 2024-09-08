@@ -1,0 +1,97 @@
+@model coffee_shop.Models.CustomerModel
+@{
+    ViewData["Title"] = "Customer Form";
+}
+<h1>Customer Form</h1><br />
+<form asp-controller="Customer" asp-action="CustomerList" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row mb-3">
+        <label for="CustomerName" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Customer
+            Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="CustomerName" />
+            <span asp-validation-for="CustomerName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="HomeAddress" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Home Address</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="HomeAddress" />
+            <span asp-validation-for="HomeAddress" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="Email" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="MobileNo" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Mobile Number</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="MobileNo" />
+            <span asp-validation-for="MobileNo" class="text-danger"></span>
+        </div>
+    </div>
+
+    @* <div class="row mb-3">
+    <label for="GSTNO" class="col-sm-2 col-form-label"><span class="text-danger">*</span>GST Number</label>
+    <div class="col-sm-10">
+    <input type="text" class="form-control" asp-for="GSTNO" />
+    <span asp-validation-for="GSTNO" class="text-danger"></span>
+    </div>
+    </div> *@
+
+    <div class="row mb-3">
+        <label for="CityName" class="col-sm-2 col-form-label"><span class="text-danger">*</span>City Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="CityName" />
+            <span asp-validation-for="CityName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="PinCode" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Pin Code</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="PinCode" />
+            <span asp-validation-for="PinCode" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="NetAmount" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Net Amount</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" asp-for="NetAmount" />
+            <span asp-validation-for="NetAmount" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="UserID" class="col-sm-2 col-form-label"><span class="text-danger">*</span>User ID</label>
+        <div class="col-sm-10">
+            <select class="form-control" asp-for="UserID"
+                asp-items="@(new SelectList(ViewBag.Users, "UserID", "UserName"))">
+                <option value="">Select User</option>
+            </select>
+            <span asp-validation-for="UserID" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-controller="Customer" asp-action="CustomerList" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

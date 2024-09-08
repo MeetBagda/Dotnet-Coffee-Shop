@@ -1,0 +1,89 @@
+@model coffee_shop.Models.OrderModel
+@{
+    ViewData["Title"] = "Order Form";
+} <h1>Order Form</h1><br />
+<form asp-controller="Order" asp-action="OrderList" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row mb-3">
+        <label for="OrderDate" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Order Date</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" asp-for="OrderDate" />
+            <span asp-validation-for="OrderDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="OrderNumber" class="col-sm-2 col-form-label"><span class="text-danger">*</span>OrderCode</label>
+        <div class="col-sm-10">
+            <input type="code" class="form-control" asp-for="OrderNumber" />
+            <span asp-validation-for="OrderNumber" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="CustomerID" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Customer ID</label>
+        <div class="col-sm-10">
+            <select class="form-control" asp-for="CustomerID"
+                asp-items="@(new SelectList(ViewBag.Customers, "CustomerID", "CustomerName"))">
+                <option value="">Select Customer</option>
+            </select>
+            <span asp-validation-for="CustomerID" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="PaymentMode" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Payment Mode</label>
+        <div class="col-sm-10">
+            <select class="form-select" asp-for="PaymentMode">
+                <option selected disabled>Select Payment Mode</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Net Banking">Net Banking</option>
+                <option value="BHIM">BHIM</option>
+            </select>
+            <span asp-validation-for="PaymentMode" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+        <label for="TotalAmount" class="col-sm-2 col-form-label">Total Amount</label>
+        <div class="col-sm-10">
+            <input type="number" step="0.01" class="form-control" asp-for="TotalAmount" />
+            <span asp-validation-for="TotalAmount" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="ShippingAddress" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Shipping
+            Address</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="ShippingAddress" />
+            <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="UserID" class="col-sm-2 col-form-label"><span class="text-danger">*</span>User ID</label>
+        <div class="col-sm-10">
+            <select class="form-control" asp-for="UserID"
+                asp-items="@(new SelectList(ViewBag.Users, "UserID", "UserName"))">
+                <option value="">Select User</option>
+            </select>
+            <span asp-validation-for="UserID" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-controller="Order" asp-action="OrderList" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,74 @@
+@model coffee_shop.Models.UserModel
+
+@{
+    ViewData["Title"] = "User Form";
+}
+<h1>User Form</h1><br />
+<form asp-controller="User" asp-action="UserList" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row mb-3">
+        <label for="UserName" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Username</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="UserName" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="Email" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="Password" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" asp-for="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="MobileNo" class="col-sm-2 col-form-label"><span class="text-danger">*</span>MobileNo</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="MobileNo" />
+            <span asp-validation-for="MobileNo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="Address" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Address</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="Address" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+    </div>
+    <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0"><span class="text-danger">*</span>IsActive</legend>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" asp-for="IsActive" value="true" checked>
+                <label class="form-check-label">
+                    True
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" asp-for="IsActive" value="false">
+                <label class="form-check-label">
+                    False
+                </label>
+            </div>
+            <span asp-validation-for="IsActive" class="text-danger"></span>
+        </div>
+    </fieldset>
+    <div class="row mb-3">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-controller="User" asp-action="UserList" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

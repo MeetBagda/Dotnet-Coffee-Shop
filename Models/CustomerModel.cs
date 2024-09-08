@@ -24,6 +24,7 @@ namespace coffee_shop.Models
         public string MobileNo { get; set; }
 
         [Required(ErrorMessage = "GST No is required.")]
+        [StringLength(15, ErrorMessage = "GST Number cannot be longer than 15 characters")]
         public string GSTNo { get; set; }
 
         [Required(ErrorMessage = "City Name is required.")]

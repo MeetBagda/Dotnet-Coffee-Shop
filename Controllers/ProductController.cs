@@ -51,26 +51,37 @@ namespace coffee_shop.Controllers
 
         public IActionResult ProductSave(ProductModel productModel)
         {
+            //if (UserDropdownModel.UserID <= 0)
+            //{
+            //    ModelState.AddModelError("UserID", "A valid User is required.");
+            //}
 
-            string connectionString = this.configuration.GetConnectionString("ConnectionString");
-            SqlConnection connection1 = new SqlConnection(connectionString);
-            connection1.Open();
-            SqlCommand command1 = connection1.CreateCommand();
-            command1.CommandType = System.Data.CommandType.StoredProcedure;
-            command1.CommandText = "spProducts_SelectDropdown";
-            SqlDataReader reader1 = command1.ExecuteReader();
-            DataTable dataTable1 = new DataTable();
-            dataTable1.Load(reader1);
-            List<ProductDropdownModel> productList = new List<ProductDropdownModel>();
-            foreach (DataRow data in dataTable1.Rows)
+            if (ModelState.IsValid)
             {
-                ProductDropdownModel productDropDownModel = new ProductDropdownModel();
-                productDropDownModel.ProductID = Convert.ToInt32(data["ProductID"]);
-                productDropDownModel.ProductName = data["ProductName"].ToString();
-                productList.Add(productDropDownModel);
+                string connectionString = this.configuration.GetConnectionString("ConnectionString");
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                if (productModel.ProductID == null)
+                {
+                    command.CommandText = "spProduct_Insert";
+                }
+                else
+                {
+                    command.CommandText = "spProduct_Update";
+                    command.Parameters.Add("@ProductID", SqlDbType.Int).Value = productModel.ProductID;
+                }
+                command.Parameters.Add("@ProductName", SqlDbType.VarChar).Value = productModel.ProductName;
+                command.Parameters.Add("@ProductCode", SqlDbType.VarChar).Value = productModel.ProductCode;
+                command.Parameters.Add("@ProductPrice", SqlDbType.Decimal).Value = productModel.ProductPrice;
+                command.Parameters.Add("@Description", SqlDbType.VarChar).Value = productModel.Description;
+                //command.Parameters.Add("@UserID", SqlDbType.Int).Value = productModel.UserID;
+                command.ExecuteNonQuery();
+                return RedirectToAction("ProductList");
             }
-            ViewBag.ProductList = productList;
-            return RedirectToAction("ProductList");
+
+            return View("ProductAddEdit", productModel);
         }
 
 

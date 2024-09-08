@@ -1,18 +1,12 @@
 ﻿@model coffee_shop.Models.ProductModel
 
-@{
-    ViewData["Title"] = Model.ProductID == null ? "Add New Product" : "Edit Product";
-}
-
-<h1>@ViewData["Title"]</h1>
 
 <div class="row">
     <div class="col-md-6">
         <form asp-action="ProductSave" method="post">
-            @if (Model.ProductID != null)
-            {
+         
                 <input type="hidden" asp-for="ProductID" />
-            }
+            
 
             <div class="form-group">
                 <label asp-for="ProductName" class="control-label"></label>
@@ -39,19 +33,14 @@
             </div>
 
             <div class="form-group">
-                <select class="form-control" asp-for="ProductID">
-                    <option value="">Select Product</option>
-                    @foreach (var product in ViewBag.ProductList)
-                    {
-                        <option value="@product.ProductID">@product.ProductName</option>
-                    }
+                <label asp-for="ProductID" class="control-label"></label>
+                <select class="form-control" asp-for="ProductID" asp-items="@(new SelectList(ViewBag.ProductList, "ProductID", "ProductName"))">
+                    <option value="">Select Customer</option>
                 </select>
             </div>
 
-
-
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">@ViewData["Title"]</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
                 <a asp-action="ProductList" class="btn btn-secondary">Cancel</a>
             </div>
         </form>

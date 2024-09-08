@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Data;
+using coffee_shop.Models;
 
 namespace coffee_shop.Controllers
 {
@@ -45,6 +46,20 @@ namespace coffee_shop.Controllers
                 Console.WriteLine(ex.ToString());
             }
             return RedirectToAction("UserList");
+        }
+
+        public IActionResult UserSave(UserModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("User");
+            }
+            return View("UserForm", model);
+        }
+
+        public IActionResult UserForm()
+        {
+            return View();
         }
     }
 }

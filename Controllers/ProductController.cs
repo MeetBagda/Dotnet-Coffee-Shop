@@ -49,39 +49,37 @@ namespace coffee_shop.Controllers
             return RedirectToAction("ProductList");
         }
 
-        public IActionResult ProductSave(ProductModel productModel)
+        public IActionResult ProductSave(ProductModel model)
         {
-            //if (UserDropdownModel.UserID <= 0)
-            //{
-            //    ModelState.AddModelError("UserID", "A valid User is required.");
-            //}
-
             if (ModelState.IsValid)
             {
-                string connectionString = this.configuration.GetConnectionString("ConnectionString");
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-                SqlCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.StoredProcedure;
-                if (productModel.ProductID == null)
-                {
-                    command.CommandText = "spProduct_Insert";
-                }
-                else
-                {
-                    command.CommandText = "spProduct_Update";
-                    command.Parameters.Add("@ProductID", SqlDbType.Int).Value = productModel.ProductID;
-                }
-                command.Parameters.Add("@ProductName", SqlDbType.VarChar).Value = productModel.ProductName;
-                command.Parameters.Add("@ProductCode", SqlDbType.VarChar).Value = productModel.ProductCode;
-                command.Parameters.Add("@ProductPrice", SqlDbType.Decimal).Value = productModel.ProductPrice;
-                command.Parameters.Add("@Description", SqlDbType.VarChar).Value = productModel.Description;
-                //command.Parameters.Add("@UserID", SqlDbType.Int).Value = productModel.UserID;
-                command.ExecuteNonQuery();
-                return RedirectToAction("ProductList");
+                return RedirectToAction("Product");
+            }
+            return View("ProductForm", model);
+        }
+
+        public IActionResult ProductForm()
+        {
+            string connectionString = this.configuration.GetConnectionString("ConnectionString");
+            SqlConnection sqlConnection1 = new SqlConnection(connectionString);
+            sqlConnection1.Open();
+            SqlCommand command1 = sqlConnection1.CreateCommand();
+            command1.CommandType = System.Data.CommandType.StoredProcedure;
+            command1.CommandText = "spUsers_SelectDropdown";
+            SqlDataReader reader1 = command1.ExecuteReader();
+            DataTable dataTable1 = new DataTable();
+            dataTable1.Load(reader1);
+            List<UserDropDownModel> userList = new List<UserDropDownModel>();
+            foreach (DataRow data in dataTable1.Rows)
+            {
+                UserDropDownModel userDropDownModel = new UserDropDownModel();
+                userDropDownModel.UserID = Convert.ToInt32(data["UserID"]);
+                userDropDownModel.UserName = data["UserName"].ToString();
+                userList.Add(userDropDownModel);
             }
 
-            return View("ProductAddEdit", productModel);
+            ViewBag.Users = userList;
+            return View();
         }
 
 
